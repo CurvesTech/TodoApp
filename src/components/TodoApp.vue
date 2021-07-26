@@ -90,6 +90,8 @@ export default {
       this.list = this.list.filter((item) => {
         return item.id != itemId;
       });
+
+      localStorage.setItem('todoList', JSON.stringify(this.list));
     },
     todoAdded() {
       if(this.todo.trim() !== '') {
