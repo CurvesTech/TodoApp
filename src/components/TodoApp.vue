@@ -127,6 +127,8 @@ export default {
   }
   .content-box form {
     display: flex;
+		justify-content: space-between;
+		align-items: stretch;
   }
   .content-box > form > input {
     font-size: 24px;
@@ -134,6 +136,8 @@ export default {
     border: 1px solid #ebebeb;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+		display: block;
+		width: 100%;
     flex: 3;
   }
   .content-box > form > input:focus {
@@ -143,14 +147,23 @@ export default {
     border: 1px solid yellow;
   }
   .content-box > form > button {
-    background: rgb(21, 21, 134);
+    background: rgb(27, 27, 177);
     font-size: 24px;
     padding: 10px;
     border: none;
     color: white;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+		width: 100%;
     flex: 1;
+		cursor: pointer;
+		transition: background 0.5s;
+  }
+  .content-box > form > button:hover {
+    background: rgb(6, 6, 39);
+  }
+  .content-box > form > button:active {
+    background: rgb(25, 25, 167);
   }
 
   input[type="checkbox"] {
@@ -188,6 +201,19 @@ export default {
 
   ul {
     list-style-type: none;
+  }
+
+  @media screen and (max-width: 800px) {
+		.content-box > form > input {
+			font-size: 18px;
+			padding: 8px;
+			flex: 3;	
+		}
+		.content-box > form > button {
+			flex: 2;
+			font-size: 18px;
+			padding: 8px;
+		}
   }
 
 </style>
